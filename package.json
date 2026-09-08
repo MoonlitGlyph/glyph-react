@@ -2,6 +2,10 @@
   "name": "@raincheck/glyph-react",
   "version": "0.1.0",
   "description": "Focused, tree-shakeable React hooks written in TypeScript.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoonlitGlyph/glyph-react.git"
+  },
   "type": "module",
   "sideEffects": false,
   "files": [

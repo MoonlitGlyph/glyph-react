@@ -1,0 +1,68 @@
+{
+  "name": "@moonlit/glyph-react",
+  "version": "0.1.0",
+  "description": "Focused, tree-shakeable React hooks written in TypeScript.",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    "./array": {
+      "types": "./dist/array.d.ts",
+      "import": "./dist/array.js"
+    },
+    "./document": {
+      "types": "./dist/document.d.ts",
+      "import": "./dist/document.js"
+    },
+    "./render": {
+      "types": "./dist/render.d.ts",
+      "import": "./dist/render.js"
+    },
+    "./state": {
+      "types": "./dist/state.d.ts",
+      "import": "./dist/state.js"
+    },
+    "./time": {
+      "types": "./dist/time.d.ts",
+      "import": "./dist/time.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "prepare": "npm run build",
+    "pack:check": "npm pack --dry-run",
+    "verify": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run pack:check"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "react": ">=18 <20"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@testing-library/react": "^16.3.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "eslint": "^9.35.0",
+    "jsdom": "^26.1.0",
+    "prettier": "^3.6.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.42.0",
+    "vitest": "^3.2.4"
+  }
+}

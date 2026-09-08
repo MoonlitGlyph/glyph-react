@@ -6,7 +6,7 @@ import { useOnOff } from "../src/state.js";
 import { useStateRef } from "../src/state.js";
 import { useToggleInterval } from "../src/time.js";
 
-describe("@moonlit/glyph-react", () => {
+describe("@raincheck/glyph-react", () => {
   it("controls boolean state", () => {
     const { result } = renderHook(() => useOnOff());
     act(result.current.on);

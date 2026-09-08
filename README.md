@@ -1,13 +1,13 @@
-# @moonlit/glyph-react
+# @raincheck/glyph-react
 
 Small, focused, tree-shakeable React hooks with TypeScript declarations.
 
 ```sh
-npm install @moonlit/glyph-react react
+npm install @raincheck/glyph-react react
 ```
 
 ```ts
-import { useOnOff, useStateRef } from "@moonlit/glyph-react/state";
+import { useOnOff, useStateRef } from "@raincheck/glyph-react/state";
 ```
 
 React 18 or 19 is required as a peer dependency. Only explicit category subpath
@@ -36,3 +36,27 @@ imports are supported.
 npm install
 npm run verify
 ```
+
+## Publishing
+
+Run in Git Bash from this repository:
+
+```sh
+npm run release
+```
+
+The script verifies the package, prompts for an npm token without displaying it,
+and publishes the current version publicly to npm. The token is passed through
+the script's environment and cleared when the script exits; it is never written
+to a file. The committed .npmrc contains only the NPM_TOKEN placeholder.
+
+The token must have publishing access to the package scope. npm may require a
+2FA challenge unless the token permits bypassing 2FA.
+
+To verify and preview publishing without uploading or prompting for a token:
+
+```sh
+npm run release -- --dry-run
+```
+
+Use a new package version for each release.

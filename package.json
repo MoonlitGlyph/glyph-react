@@ -1,5 +1,5 @@
 {
-  "name": "@moonlit/glyph-react",
+  "name": "@raincheck/glyph-react",
   "version": "0.1.0",
   "description": "Focused, tree-shakeable React hooks written in TypeScript.",
   "type": "module",
@@ -41,6 +41,7 @@
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "prepare": "npm run build",
     "pack:check": "npm pack --dry-run",
+    "release": "bash scripts/publish.sh",
     "verify": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run pack:check"
   },
   "engines": {
